@@ -10,7 +10,7 @@ function Results({test, resultId, onReset}) {
               .map(key => (
                 <p key={key}><b>{key}</b> : {test.results[resultId][key]}</p>
                 ))}
-            {test.results[resultId].image !== undefined ? <img className="cardimg" src={"../public/" + test.results[resultId].image} alt={test.results[resultId].result}/> : null}
+            {test.results[resultId].image !== undefined ? <img className="cardimg" src={"/" + test.results[resultId].image} alt={test.results[resultId].result}/> : null}
             <button className="back"onClick={onReset}>Atgal</button>
         </div>
     )
