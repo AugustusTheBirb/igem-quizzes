@@ -1,6 +1,6 @@
 import React from "react";
 
-function Quiz( {test, answers, setAnswers, setResults, setShowResults, onComplete}) {
+function Quiz( {test, answers, setAnswers, setResults, setShowResults, setCurrentView}) {
     
     function getOccurrence(array, value) {
         let count = 0;
@@ -28,12 +28,13 @@ function Quiz( {test, answers, setAnswers, setResults, setShowResults, onComplet
           }
           setResults(maximumId)
           setShowResults(true)
-          onComplete()
+          setCurrentView('results')
           
         }}
 
     return (
         <form  className="quiz" action="">
+          <button type="button" className='submit' onClick={() => setCurrentView('menu')}>Back</button>
           {test.questions.map((question, idee) => (
             <fieldset key={idee}>
               <legend>{question.question}</legend>

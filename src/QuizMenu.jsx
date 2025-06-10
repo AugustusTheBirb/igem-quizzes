@@ -8,7 +8,6 @@ const QuizMenu = ({setCurrentView, setTestId, data}) => {
 
     return (
         <>
-            <h1>Vilnius iGEM Quizzes</h1>
             <div className="buttons">
             {data.map((test, idx) => (
             <div key={idx}>
