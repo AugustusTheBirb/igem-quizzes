@@ -1,6 +1,6 @@
 import React from "react";
 
-function Quiz( {test, answers, setAnswers, setResults, setShowResults, setCurrentView}) {
+function Quiz( {test, answers, setAnswers, setResults, setShowResults, setCurrentView, language}) {
     
     function getOccurrence(array, value) {
         let count = 0;
@@ -34,7 +34,7 @@ function Quiz( {test, answers, setAnswers, setResults, setShowResults, setCurren
 
     return (
         <form  className="quiz" action="">
-          <button type="button" className='submit' onClick={() => setCurrentView('menu')}>Back</button>
+          <button type="button" className='submit' onClick={() => setCurrentView('menu')}>{language === 'english' ? "Back" : "Atgal"}</button>
           {test.questions.map((question, idee) => (
             <fieldset key={idee}>
               <legend>{question.question}</legend>
@@ -50,7 +50,7 @@ function Quiz( {test, answers, setAnswers, setResults, setShowResults, setCurren
               </ul>
             </fieldset>  
           ))}
-          <button type="button" className='submit' onClick={submit}>Submit</button>
+          <button type="button" className='submit' onClick={submit}>{language === 'english' ? "Submit" : "Pateikti"}</button>
         </form>)
 }
 export default Quiz

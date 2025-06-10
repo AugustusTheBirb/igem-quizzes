@@ -1,6 +1,6 @@
 import React from "react";
 
-function Results({test, resultId, onReset}) {
+function Results({test, resultId, onReset, language}) {
     return (
         <div className="results" >
             <h3>{test.results[resultId].result}</h3>
@@ -13,7 +13,7 @@ function Results({test, resultId, onReset}) {
                 ))}
             </ul>
             {test.results[resultId].image !== undefined ? <img className="cardimg" src={"/" + test.results[resultId].image} alt={test.results[resultId].result}/> : null}
-            <button className="back"onClick={onReset}>Back</button>
+            <button className="back"onClick={onReset}>{language === 'english' ? "Back" : "Atgal"}</button>
         </div>
     )
 }

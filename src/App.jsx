@@ -37,16 +37,16 @@ function App() {
             </>
           )
         case 'menu':
-          return <QuizMenu setTestId={setTestId} setCurrentView={setCurrentView} data={data}/>;
+          return <QuizMenu setTestId={setTestId} setCurrentView={setCurrentView} data={data} language={language}/>;
         case 'quiz':
           return (              
-                    <Quiz test={data[testId]} answers={answers} setAnswers={setAnswers}
+                    <Quiz test={data[testId]} answers={answers} setAnswers={setAnswers} language={language}
                     setResults={setResults} setShowResults={setShowResults}
                     setCurrentView={setCurrentView}/>
                 );
         case 'results':
           return (
-            <Results test={data[testId]} resultId={resultId}
+            <Results test={data[testId]} resultId={resultId} language={language}
               onReset={reset}/>
           );
         }
