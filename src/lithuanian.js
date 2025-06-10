@@ -65,7 +65,7 @@ const data = [
                   },
                   {
                     
-                    "text": "Keičiu sprendimus pagal tai kuria linkme krypsta situacija 📍"
+                    "text": "Keičiu sprendimus pagal tai, kuria linkme krypsta situacija 📍"
                   }
                 ]
               },
@@ -881,4 +881,4 @@ const data = [
         }
         ]
 
-export default data
+  export default data

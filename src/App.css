@@ -117,7 +117,7 @@ ul {
   align-items: center;
   color: white;
   text-align: justify;
-  
+  max-width: 600px;
 }
 
 .blurredBg {
